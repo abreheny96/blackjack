@@ -82,6 +82,9 @@ function buildDeck() {
         if (reduceAce(yourSum, yourAceCount) >21) {
             canHit = false;
         }
+        
+        document.getElementById("dealer-sum").innerText = dealerSum;        
+        document.getElementById("your-sum").innerText = yourSum;
     }
 
     function stay() {

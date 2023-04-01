@@ -60,14 +60,12 @@ function buildDeck() {
             yourAceCount += checkAce(card);
             document.getElementById("your-cards").append(cardImg); 
         }
-        
-        document.getElementById("dealer-sum").innerText = dealerSum;
-        document.getElementById("your-sum").innerText = yourSum;
 
         console.log(yourSum);
         document.getElementById ("hit").addEventListener("click", hit);
         document.getElementById ("stay").addEventListener("click", stay);
-
+        document.getElementById("dealer-sum").innerText = dealerSum;
+        document.getElementById("your-sum").innerText = yourSum;
     }
 
     function hit() {

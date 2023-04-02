@@ -48,7 +48,6 @@ function buildDeck() {
             cardImg.src = "./cards/" + card + ".png";
             dealerSum += getValue(card);
             dealerAceCount += checkAce(card);
-            document.getElementById("dealer-cards").append(cardImg);
         }
         console.log(dealerSum);
 

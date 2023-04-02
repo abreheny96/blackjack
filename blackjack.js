@@ -45,11 +45,14 @@ function buildDeck() {
         while (dealerSum < 17) {
             let cardImg = document.createElement("img");
             let card = deck.pop();
-            cardImg.src = "./cards/" + card + ".png";
+            cardImg.src = "./cards/" + card + ".png"; 
             dealerSum += getValue(card);
             dealerAceCount += checkAce(card);
+            document.getElementById("dealer-cards").append(cardImg);
         }
+
         console.log(dealerSum);
+        document.getElementById("dealer-sum").innerText = dealerSum;
 
         for (let i = 0; i < 2; i++) {
             let cardImg = document.createElement ("img");
@@ -61,10 +64,10 @@ function buildDeck() {
         }
 
         console.log(yourSum);
+        document.getElementById("your-sum").innerText = yourSum;
         document.getElementById ("hit").addEventListener("click", hit);
         document.getElementById ("stay").addEventListener("click", stay);
-        document.getElementById("dealer-sum").innerText = dealerSum;
-        document.getElementById("your-sum").innerText = yourSum;
+
     }
 
     function hit() {
@@ -82,8 +85,8 @@ function buildDeck() {
         if (reduceAce(yourSum, yourAceCount) >21) {
             canHit = false;
         }
-        
-        document.getElementById("dealer-sum").innerText = dealerSum;        
+
+        document.getElementById("dealer-sum").innerText = dealerSum;
         document.getElementById("your-sum").innerText = yourSum;
     }
 

@@ -52,7 +52,6 @@ function buildDeck() {
         }
 
         console.log(dealerSum);
-        document.getElementById("dealer-sum").innerText = dealerSum;
 
         for (let i = 0; i < 2; i++) {
             let cardImg = document.createElement ("img");
@@ -64,10 +63,8 @@ function buildDeck() {
         }
 
         console.log(yourSum);
-        document.getElementById("your-sum").innerText = yourSum;
         document.getElementById ("hit").addEventListener("click", hit);
         document.getElementById ("stay").addEventListener("click", stay);
-
     }
 
     function hit() {
@@ -85,9 +82,7 @@ function buildDeck() {
         if (reduceAce(yourSum, yourAceCount) >21) {
             canHit = false;
         }
-
-        document.getElementById("dealer-sum").innerText = dealerSum;
-        document.getElementById("your-sum").innerText = yourSum;
+        
     }
 
     function stay() {

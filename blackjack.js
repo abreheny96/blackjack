@@ -63,6 +63,7 @@ function buildDeck() {
         }
 
         console.log(yourSum);
+        document.getElementById("your-sum").innerText = yourSum;
         document.getElementById ("hit").addEventListener("click", hit);
         document.getElementById ("stay").addEventListener("click", stay);
     }

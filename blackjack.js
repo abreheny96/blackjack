@@ -82,7 +82,7 @@ function buildDeck() {
         if (reduceAce(yourSum, yourAceCount) >21) {
             canHit = false;
         }
-        
+        document.getElementById("your-sum").innerText = yourSum;
     }
 
     function stay() {
